@@ -57,7 +57,7 @@ jobs:
           sleep 10
           sudo /Applications/'Install macOS ${{ env.installer_name }}'.app/Contents/Resources/createinstallmedia --volume /Volumes/'${{ env.installer_name }}' --nointeraction
           sudo cp "/Volumes/Install macOS ${{ env.installer_name }}/BaseSystem/BaseSystem.dmg" ~/Desktop/'${{ env.installer_name }}'.dmg
-          sudo hdutil imageinfo ~/Desktop/'${{ env.installer_name }}'.dmg
+          sudo hdiutil imageinfo ~/Desktop/'${{ env.installer_name }}'.dmg
           sudo hdiutil eject -force /Volumes/'Install macOS ${{ env.installer_name }}'
 #          hdutil imageinfo /tmp/'${{ env.installer_name }}'.dmg
 #          sudo mv /tmp/'${{ env.installer_name }}'.dmg ~/Desktop/'${{ env.installer_name }}'.dmg
